@@ -5,7 +5,7 @@
 ---
 
 ### 🎥 Video Pitch
-Check out our video pitching and demonstration below:
+Check out our video pitching and demonstration here:
 https://drive.google.com/drive/folders/1H3mxVj4xnJh5AkQTSZWZ7ksM_HovnO-D?usp=sharing
 
 
