@@ -1,22 +1,17 @@
-# 💰 Gold Digger AI Assistant
+## 💰 Gold Digger AI Assistant
 #### *AI-Powered Gold Decision Support for Malaysia*
 
 **Team Name:** `hackathon4dummies` 🚀  
 ---
 
-## 🎥 Video Pitch
+### 🎥 Video Pitch
 Check out our video pitching and demonstration below:
 
-> [!TIP]
-> ### [**CLICK HERE TO WATCH OUR VIDEO PITCH**](---------------------)
-> *See how Gold Digger AI is revolutionizing gold investment in Malaysia!*
 
----
-
-## 📌 Overview
+### 📌 Overview
 **Gold Digger AI Assistant** is an intelligent decision-support system specifically engineered for the Malaysian gold market. We bridge the gap between complex market data and everyday investors by using AI to provide actionable insights.
 
-## ✨ Key Features
+### ✨ Key Features
 * 📈 **Real-Time Tracking:** Live gold price updates tailored to the Malaysian Ringgit (MYR).
 * 🤖 **AI Forecasting:** Predictive analytics to help users identify optimal "Buy" or "Sell" moments.
 * 📱 **User-Friendly Interface:** Simplified data visualization for a seamless experience.
