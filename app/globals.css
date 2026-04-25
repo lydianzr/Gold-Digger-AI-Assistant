@@ -1,0 +1,481 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: oklch(0.12 0 0);
+  --foreground: oklch(0.95 0 0);
+  --card: oklch(0.16 0 0);
+  --card-foreground: oklch(0.95 0 0);
+  --popover: oklch(0.16 0 0);
+  --popover-foreground: oklch(0.95 0 0);
+  --primary: oklch(0.78 0.12 85);
+  --primary-foreground: oklch(0.12 0 0);
+  --secondary: oklch(0.22 0 0);
+  --secondary-foreground: oklch(0.95 0 0);
+  --muted: oklch(0.22 0 0);
+  --muted-foreground: oklch(0.65 0 0);
+  --accent: oklch(0.78 0.12 85);
+  --accent-foreground: oklch(0.12 0 0);
+  --destructive: oklch(0.55 0.22 25);
+  --destructive-foreground: oklch(0.95 0 0);
+  --border: oklch(0.28 0 0);
+  --input: oklch(0.22 0 0);
+  --ring: oklch(0.78 0.12 85);
+  --chart-1: oklch(0.78 0.12 85);
+  --chart-2: oklch(0.65 0.1 85);
+  --chart-3: oklch(0.55 0.08 85);
+  --chart-4: oklch(0.70 0.11 85);
+  --chart-5: oklch(0.85 0.08 85);
+  --radius: 0.75rem;
+  --sidebar: oklch(0.14 0 0);
+  --sidebar-foreground: oklch(0.95 0 0);
+  --sidebar-primary: oklch(0.78 0.12 85);
+  --sidebar-primary-foreground: oklch(0.12 0 0);
+  --sidebar-accent: oklch(0.22 0 0);
+  --sidebar-accent-foreground: oklch(0.95 0 0);
+  --sidebar-border: oklch(0.28 0 0);
+  --sidebar-ring: oklch(0.78 0.12 85);
+  --gold: oklch(0.78 0.12 85);
+  --gold-muted: oklch(0.30 0.04 85);
+  --gold-dark: oklch(0.65 0.1 85);
+  --success: oklch(0.65 0.18 145);
+  --warning: oklch(0.75 0.15 60);
+}
+
+.dark {
+  --background: oklch(0.12 0 0);
+  --foreground: oklch(0.95 0 0);
+  --card: oklch(0.16 0 0);
+  --card-foreground: oklch(0.95 0 0);
+  --popover: oklch(0.16 0 0);
+  --popover-foreground: oklch(0.95 0 0);
+  --primary: oklch(0.78 0.12 85);
+  --primary-foreground: oklch(0.12 0 0);
+  --secondary: oklch(0.22 0 0);
+  --secondary-foreground: oklch(0.95 0 0);
+  --muted: oklch(0.22 0 0);
+  --muted-foreground: oklch(0.65 0 0);
+  --accent: oklch(0.78 0.12 85);
+  --accent-foreground: oklch(0.12 0 0);
+  --destructive: oklch(0.55 0.22 25);
+  --destructive-foreground: oklch(0.95 0 0);
+  --border: oklch(0.28 0 0);
+  --input: oklch(0.22 0 0);
+  --ring: oklch(0.78 0.12 85);
+  --chart-1: oklch(0.78 0.12 85);
+  --chart-2: oklch(0.65 0.1 85);
+  --chart-3: oklch(0.55 0.08 85);
+  --chart-4: oklch(0.70 0.11 85);
+  --chart-5: oklch(0.85 0.08 85);
+  --sidebar: oklch(0.14 0 0);
+  --sidebar-foreground: oklch(0.95 0 0);
+  --sidebar-primary: oklch(0.78 0.12 85);
+  --sidebar-primary-foreground: oklch(0.12 0 0);
+  --sidebar-accent: oklch(0.22 0 0);
+  --sidebar-accent-foreground: oklch(0.95 0 0);
+  --sidebar-border: oklch(0.28 0 0);
+  --sidebar-ring: oklch(0.78 0.12 85);
+}
+
+@theme inline {
+  --font-sans: 'Geist', 'Geist Fallback';
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-gold: var(--gold);
+  --color-gold-muted: var(--gold-muted);
+  --color-gold-dark: var(--gold-dark);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Glassmorphism Card */
+.glass-card {
+  background: rgba(30, 30, 30, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(212, 175, 55, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Glow Effects */
+.glow-gold {
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.15), 
+              0 0 40px rgba(212, 175, 55, 0.1),
+              inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.glow-green {
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.2), 
+              0 0 40px rgba(34, 197, 94, 0.1),
+              inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.glow-red {
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.2), 
+              0 0 40px rgba(239, 68, 68, 0.1),
+              inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.glow-yellow {
+  box-shadow: 0 0 20px rgba(234, 179, 8, 0.2), 
+              0 0 40px rgba(234, 179, 8, 0.1),
+              inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Gradient Glow Borders */
+.gradient-border-green {
+  position: relative;
+}
+.gradient-border-green::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, rgba(34, 197, 94, 0.8), transparent);
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+
+.gradient-border-red {
+  position: relative;
+}
+.gradient-border-red::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, rgba(239, 68, 68, 0.8), transparent);
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+
+.gradient-border-gold {
+  position: relative;
+}
+.gradient-border-gold::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.8), transparent);
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+
+/* Pulse Animation for Result Cards */
+@keyframes pulse-glow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Chart Glow Effect */
+.chart-glow {
+  filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.4));
+}
+
+/* Background Gradient */
+.bg-gradient-dark {
+  background: linear-gradient(180deg, 
+    oklch(0.10 0 0) 0%, 
+    oklch(0.12 0.02 85) 50%,
+    oklch(0.10 0 0) 100%
+  );
+}
+
+/* ==============================================
+   MARKET CARD DESIGN SYSTEM
+   Premium yellow/gold cards with dynamic text colors
+   All cards use consistent yellow background
+   Text colors change based on market state
+   ============================================== */
+
+@layer components {
+  /* Base Market Card - Yellow/Gold Gradient with WHITE text */
+  .market-card {
+    border-radius: 1rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #D4A017 0%, #B8860B 100%) !important;
+    border: 2px solid rgba(255, 217, 90, 0.4);
+    color: #ffffff !important;
+    box-shadow: 
+      0 4px 24px rgba(212, 160, 23, 0.3),
+      0 8px 40px rgba(0, 0, 0, 0.25),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    transition: all 0.25s ease-in-out;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .market-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(255,255,255,0.1) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .market-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(255, 217, 90, 0.7);
+    box-shadow: 
+      0 12px 40px rgba(212, 160, 23, 0.4),
+      0 20px 60px rgba(0, 0, 0, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  }
+
+  /* Card Content Typography - ALL WHITE */
+  .card-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(255, 255, 255, 0.85) !important;
+    margin-bottom: 0.75rem;
+  }
+
+  .card-price {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: #ffffff !important;
+  }
+
+  /* Remove color overrides for price - keep white */
+  .card-price-positive {
+    color: #ffffff !important;
+  }
+
+  .card-price-negative {
+    color: #ffffff !important;
+  }
+
+  .card-subtitle {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.75) !important;
+    margin-top: 0.75rem;
+    font-weight: 500;
+  }
+
+  /* Volatility Meter Bar */
+  .volatility-meter {
+    width: 100%;
+    height: 6px;
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-top: 0.75rem;
+  }
+
+  .volatility-meter-fill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.3s ease;
+  }
+
+  .volatility-meter-low {
+    width: 33%;
+    background: linear-gradient(90deg, #15803d, #22c55e);
+  }
+
+  .volatility-meter-medium {
+    width: 66%;
+    background: linear-gradient(90deg, #ca8a04, #facc15);
+  }
+
+  .volatility-meter-high {
+    width: 100%;
+    background: linear-gradient(90deg, #dc2626, #ef4444);
+  }
+
+  /* Status Indicator Dot - for use inside badges */
+  .status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .status-dot-positive {
+    background: #ffffff;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
+  }
+
+  .status-dot-negative {
+    background: #ffffff;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
+  }
+
+  .status-dot-neutral {
+    background: #ffffff;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
+  }
+
+  /* Trend Arrow Icons - Colored backgrounds with white icons */
+  .trend-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+  }
+
+  .trend-arrow-up {
+    background: #15803d !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 8px rgba(21, 128, 61, 0.4);
+  }
+
+  .trend-arrow-down {
+    background: #dc2626 !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 8px rgba(220, 38, 38, 0.4);
+  }
+
+  /* Status Badge - Solid colored backgrounds */
+  .status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.35rem 0.65rem;
+    border-radius: 9999px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .status-badge-positive {
+    background: #15803d !important;
+    color: #ffffff !important;
+    border: none;
+    box-shadow: 0 2px 8px rgba(21, 128, 61, 0.4);
+  }
+
+  .status-badge-negative {
+    background: #dc2626 !important;
+    color: #ffffff !important;
+    border: none;
+    box-shadow: 0 2px 8px rgba(220, 38, 38, 0.4);
+  }
+
+  .status-badge-neutral {
+    background: rgba(255, 255, 255, 0.2) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  /* Side Stats Card - Glassmorphism variant for secondary data */
+  .stats-card {
+    border-radius: 1rem;
+    padding: 1.25rem;
+    background: rgba(30, 30, 30, 0.7) !important;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #f5f5f5 !important;
+    box-shadow: 
+      0 4px 20px rgba(0, 0, 0, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    transition: all 0.25s ease-in-out;
+  }
+
+  .stats-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(212, 175, 55, 0.3);
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.4),
+      0 0 20px rgba(212, 175, 55, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  .stats-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(255, 255, 255, 0.5) !important;
+    margin-bottom: 0.5rem;
+  }
+
+  .stats-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #f5f5f5 !important;
+  }
+
+  .stats-value-positive {
+    color: #22c55e !important;
+  }
+
+  .stats-value-negative {
+    color: #ef4444 !important;
+  }
+
+  .stats-value-gold {
+    color: #D4AF37 !important;
+  }
+}
