@@ -1,5 +1,5 @@
 # 💰 Gold Digger AI Assistant
-### *AI-Powered Gold Decision Support for Malaysia*
+#### *AI-Powered Gold Decision Support for Malaysia*
 
 **Team Name:** `hackathon4dummies` 🚀  
 ---
